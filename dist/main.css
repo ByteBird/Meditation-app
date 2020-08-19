@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Quattrocento+Sans&family=Sarabun:wght@100;200;300&display=swap');
+
+/* font-family: 'Cantarell', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Sarabun', sans-serif; */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(16, 16, 51);
+    font-family: 'Sarabun', sans-serif;
+    color: rgb(214, 214, 214);
+}
+
+/* BASIC STYLES */
+
+i{
+    font-style: normal;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+}
+
+.footer-container{
+    display: none;
+}
+
+/* HEADER CONTAINER*/
+
+.fa-bars{
+    position: relative;
+    left: -70px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #999;
+}
+
+.header-container{
+    width: 40%;
+    border: 5px inset #eee;
+    height: 100%;
+}
+
+.header{
+    width: 45%;
+    position: relative;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.number{
+    font-size: 6em;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+    margin-top: 150px;
+    height: 120px;
+    width: 115px;
+    position: relative;
+    left: 10px;
+    background: rgba(16, 16, 51, 0.9);
+}
+
+.point{
+    padding: 0;
+    margin: 0;
+
+}
+
+.point span{
+    color: #777;
+}
+
+.sub-title{
+    letter-spacing: 1.5px;
+}
+
+
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.number:before{
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 1px solid rgb(214, 186, 59);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.number:after{
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    background: url(download.png), rgb(228, 203, 91);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px, 100px;
+}
+
+
+
+
+
+/* MAIN CONTAINER */
+
+.main-container{
+    width: 60%;
+    border: 5px inset #eee
+}
+
+
+.first-section{
+    position: relative;
+}
+input{
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+input:checked ~ label .options{
+    background: rgba(44, 48, 88, 0.294);
+}
