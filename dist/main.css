@@ -17,6 +17,9 @@ body{
 
 /* BASIC STYLES */
 
+a{
+    text-decoration: none;
+}
 i{
     font-style: normal;
 }
@@ -34,11 +37,12 @@ i{
 
 .fa-bars{
     position: relative;
-    left: -70px;
+    left: -120px;
     height: 100px;
     display: flex;
     align-items: center;
     color: #999;
+    cursor: pointer;
 }
 
 .header-container{
@@ -60,36 +64,12 @@ i{
     font-weight: 200;
     padding: 0;
     margin: 0;
-    margin-top: 150px;
+    margin-top: 80px;
     height: 120px;
     width: 115px;
     position: relative;
     left: 10px;
     background: rgba(16, 16, 51, 0.9);
-}
-
-.point{
-    padding: 0;
-    margin: 0;
-
-}
-
-.point span{
-    color: #777;
-}
-
-.sub-title{
-    letter-spacing: 1.5px;
-}
-
-
-
-.options{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    border-radius: 12px;
 }
 
 .number:before{
@@ -119,22 +99,30 @@ i{
     background-size: 20px, 100px;
 }
 
+.point{
+    padding: 0;
+    margin: 0;
 
-
-
-
-/* MAIN CONTAINER */
-
-.main-container{
-    width: 60%;
-    border: 5px inset #eee
 }
 
+.point span{
+    color: #777;
+}
+
+/* FIRST SECTION */
+
+
+.sub-title{
+    margin-top: 50px;
+    letter-spacing: 1.5px;
+}
 
 .first-section{
     position: relative;
 }
+
 input{
+    display: none;
 }
 
 label{
@@ -145,6 +133,129 @@ label{
     width: 100%;
 }
 
-input:checked ~ label .options{
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    transition-duration: 0.5s;
+}
+
+.options i{
+    font-size: 1.5em;
+}
+
+.options p:nth-child(3){
+padding: 18px 15px;
+    border-radius: 7px;
+    font-size: 1.7em;
+    transition-duration: 0.3s;
+}
+
+.options p:nth-child(3) span{
+    font-size: 0.8rem;
+    margin-left: 3px;
+}
+
+.options>p{
+    font-size: 0.9em;
+}
+
+/* ONE */
+
+#a:checked ~ label .one{
+    background: rgba(37, 28, 78, 0.431);
+}
+
+#a:checked ~ label .one p:nth-child(3){
+    background: rgba(98, 80, 179, 0.178);
+}
+
+/* TWO */
+
+#b:checked ~ label .two{
     background: rgba(44, 48, 88, 0.294);
+}
+
+#b:checked ~ label .two p:nth-child(3){
+    background: rgba(98, 80, 179, 0.178);
+}
+
+/* THREE */
+
+#c:checked ~ label .three{
+    background: rgba(44, 48, 88, 0.294);
+}
+
+#c:checked ~ label .three p:nth-child(3){
+    background: rgba(98, 80, 179, 0.178);
+}
+
+.main-link{
+    color: #222;
+    display: block;
+    width: 100%;
+    background: rgb(224, 199, 88);
+    border-radius: 20px;
+    padding: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* MAIN CONTAINER */
+
+.main-container{
+    width: 60%;
+    height: 100%;
+    border: 5px inset #eee
+}
+
+.main{
+    margin-top: 50px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.title{
+    margin-top: 100px;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.emotions{
+    display: flex;
+    page-break-after: 10px;
+}
+
+.emotions a{
+    font-size: 1em;
+    display: flex;
+    color: #eee;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    background: rgba(53, 19, 133, 0.726);
+    height: 120px;
+    min-width: 70px;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.emotions a span{
+    font-size: 1.3em;
+}
+
+.moments{
 }
