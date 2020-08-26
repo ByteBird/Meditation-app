@@ -188,31 +188,31 @@ label {
 /* ONE */
 
 #a:checked ~ label .one {
-  background: rgba(37, 28, 78, 0.431);
+  background: rgba(63, 50, 124, 0.431);
 }
 
 #a:checked ~ label .one p:nth-child(3) {
-  background: rgba(98, 80, 179, 0.178);
+  background: rgba(110, 89, 206, 0.178);
 }
 
 /* TWO */
 
 #b:checked ~ label .two {
-  background: rgba(44, 48, 88, 0.294);
+  background: rgba(63, 50, 124, 0.431);
 }
 
 #b:checked ~ label .two p:nth-child(3) {
-  background: rgba(98, 80, 179, 0.178);
+  background: rgba(110, 89, 206, 0.178);
 }
 
 /* THREE */
 
 #c:checked ~ label .three {
-  background: rgba(44, 48, 88, 0.294);
+  background: rgba(63, 50, 124, 0.431);
 }
 
 #c:checked ~ label .three p:nth-child(3) {
-  background: rgba(98, 80, 179, 0.178);
+  background: rgba(110, 89, 206, 0.178);
 }
 
 .main-link {
@@ -225,6 +225,12 @@ label {
   letter-spacing: 1px;
   text-align: center;
   font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+.main-link:hover {
+  background: rgb(250, 209, 45);
+  color: #eee;
 }
 
 /* MAIN CONTAINER */
@@ -293,11 +299,17 @@ label {
   letter-spacing: 1px;
 }
 
+.emotions a:nth-of-type(1) {
+  background: rgb(206, 187, 252);
+  color: #333;
+}
+
 .emotions a span {
   margin-bottom: 20px;
   font-size: 1.3em;
 }
 .articles {
+  cursor: pointer;
   position: relative;
   top: 30px;
   display: flex;
@@ -307,6 +319,35 @@ label {
   overflow: hidden;
   margin-bottom: 20px;
   border-radius: 15px;
+  transition-duration: 0.2s;
+}
+
+.articles:hover {
+  background: rgb(206, 187, 252);
+}
+
+.articles:before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 90%;
+  background: rgba(1, 3, 9, 0.6);
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.articles:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 90%;
+  background: rgba(1, 3, 9, 1);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
 }
 
 .articles a {
@@ -314,7 +355,9 @@ label {
   font-size: 2em;
   margin-left: 20px;
 }
-.moments {
+
+.articles:hover a {
+  color: #555;
 }
 
 .svg {
